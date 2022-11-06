@@ -12,9 +12,9 @@ USER node
 WORKDIR /build
 
 # Generate new volto app
-RUN curl -k -L -o workspace.zip https://github.com/plone/volto/archive/refs/heads/master.zip \
+RUN curl -k -L -o workspace.zip https://github.com/plone/volto/archive/refs/heads/add-block.zip \
     && unzip workspace.zip \
-    && mv volto-master plone-frontend
+    && mv volto-add-block plone-frontend
 
 RUN cd plone-frontend \
     && yarn install --network-timeout 1000000 \
